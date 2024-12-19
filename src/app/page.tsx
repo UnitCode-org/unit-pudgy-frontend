@@ -1,101 +1,187 @@
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
+import pudgyPenguinImg from '@/public/pudgy-penguin.png';
+import sailImg from '@/public/sail.png';
+import facebookLogo from '@/public/logo/facebook.svg';
+import instagramLogo from '@/public/logo/instagram.svg';
+import xLogo from '@/public/logo/x.svg';
+import linkedinLogo from '@/public/logo/linkedin.svg';
+import telegramLogo from '@/public/logo/telegram.svg';
+import whatsappLogo from '@/public/logo/whatsapp.svg';
+import unitNetworkImg from '@/public/unit-network.png';
+import unitLogo from '@/public/logo/unit.svg';
+import downArrow from '@/public/down-arrow.svg';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className='min-h-screen font-poppins'>
+      <div className='h-[calc(100vh+2rem)] hero-background-image px-16 fade-to-black'>
+        <div className='max-w-7xl h-screen mx-auto w-full flex flex-col items-center justify-between'>
+          <div className='flex items-center justify-between py-8 text-white w-full'>
+            <div className='flex items-center gap-20'>
+              <Link href='/' className='text-base font-medium border-b-2 px-1'>
+                HOME
+              </Link>
+              <Link href='/antartica' className='text-base font-medium'>
+                ANTARTICA
+              </Link>
+            </div>
+            <Image src={unitLogo} alt='Unit Logo' width={32} height={32} />
+            <div className='flex items-center gap-20'>
+              <Link href='/tokenisation' className='text-base font-medium'>
+                TOKENISATION
+              </Link>
+              <Link href='/global' className='text-base font-medium'>
+                GLOBAL
+              </Link>
+            </div>
+          </div>
+          <div className='flex items-center flex-col justify-center text-white max-w-xl text-center'>
+            <h2 className='text-2xl font-medium'>UNIT NETWORK X PUDGY X INSIDER EXPEDITIONS</h2>
+            <h1 className='text-8xl font-abhaya-libre font-semibold mt-2'>EXPLORE ANTARTICA</h1>
+          </div>
+          <div className='flex items-center justify-between text-white w-full py-10'>
+            <div>
+              <p className='text-2xl font-semibold font-abhaya-libre'>JANUARY 4-12, 2025</p>
+              <p className='text-base text-[#A6A6A6]'>Trip Date</p>
+            </div>
+            <Image src={downArrow} alt='Down Arrow' width={24} height={24} />
+            <div>
+              <p className='text-2xl font-semibold font-abhaya-libre'>USHUAIA, ARGENTINA</p>
+              <p className='text-base text-[#A6A6A6]'>Starting Location</p>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      <div className='w-full bg-white rounded-3xl -mt-[2rem]'>
+        <div className='grid grid-cols-2 w-full max-w-7xl mx-auto pt-32 gap-16 px-16'>
+          <div className='flex flex-col'>
+            <h1 className='text-6xl text-[64px] font-abhaya-libre font-semibold'>WHAT IS PUDGY PENGUINS?</h1>
+            <p className='text-2xl text-[22px] pt-28'>
+              Pudgy Penguin is a leading community globally, which fosters{' '}
+              <span className='font-semibold'>creativity, freedom, and community</span>. The Pudgy Penguins brand
+              produces content, merchandise, toys, and digital collectables.{' '}
+              <span className='font-semibold'>We believe in the power of play and imagination</span>, and we&apos;re
+              committed to helping you unlock your inner child.
+            </p>
+          </div>
+          <div className='bg-[#F5F5F5] rounded-3xl px-10 pt-24'>
+            <div className='w-full h-[24rem] relative rounded-3xl overflow-clip'>
+              <Image src={pudgyPenguinImg} alt='Pudgy Penguin Image' fill className='object-cover object-top' />
+            </div>
+          </div>
+        </div>
+        <div className='grid grid-cols-2 w-full max-w-7xl mx-auto pt-32 gap-16 px-16 pb-32'>
+          <div className='bg-[#F5F5F5] rounded-3xl px-10 pt-24'>
+            <div className='w-full h-[24rem] relative rounded-3xl overflow-clip'>
+              <Image src={unitNetworkImg} alt='Unit Network Image' fill className='object-cover' />
+            </div>
+          </div>
+          <div className='flex flex-col'>
+            <h1 className='text-6xl text-[64px] font-abhaya-libre font-semibold'>WHAT IS UNIT NETWORK?</h1>
+            <p className='text-2xl text-[22px] pt-28'>
+              Unit Network is a <span className='font-semibold'>leading technology for tokenisation</span> with a
+              community with a wide range of interest and backgrounds, with the underlying mission to create{' '}
+              <span className='font-semibold'>a better economic system and world</span>.
+            </p>
+          </div>
+        </div>
+        <div className='w-full max-w-7xl mx-auto px-16'>
+          <hr className='border-[#DEDEDE] border w-full' />
+        </div>
+        <div className='w-full max-w-7xl mx-auto pt-28 px-16 pb-32'>
+          <div className='grid grid-cols-2 gap-16'>
+            <h2 className='text-6xl text-[64px] font-abhaya-libre font-semibold'>WHAT IS UNITPUDGY ANTARTICA?</h2>
+            <div>
+              <p className='text-2xl text-[22px]'>
+                Pudgy is Pudgy is going to <span className='font-semibold'>Antartica in January</span>, and plans to go
+                yearly.
+              </p>
+              <Link
+                href='/antartica'
+                className='bg-black text-white px-6 py-3 rounded-full font-semibold text-lg mt-16 hover:bg-gray-800 transition block w-fit'
+              >
+                Learn more
+              </Link>
+            </div>
+          </div>
+          <div className='w-full h-[20rem] relative rounded-3xl overflow-clip mt-14'>
+            <Image src={sailImg} alt='Sail Image' fill className='object-cover' />
+          </div>
+        </div>
+        <div className='w-full max-w-7xl mx-auto px-16'>
+          <h3 className='text-6xl text-[56px] font-semibold font-abhaya-libre text-center'>THINGS TO KNOW</h3>
+          <div className='grid grid-cols-2 gap-10 mt-20'>
+            <div className='bg-black w-full h-[40rem] rounded-3xl p-12 flex flex-col items-center justify-center gap-8 text-center'>
+              <h4 className='text-white text-5xl font-semibold font-abhaya-libre'>UNITPUDGY TOKENISATION</h4>
+              <p className='text-xl text-white leading-8'>
+                Pudgy is being tokenised on the Unit Network, so many people can hold a Pudgy Penguin. We hope this will
+                bring this movement to the world.
+              </p>
+              <Link
+                href='/tokenisation'
+                className='bg-white text-black px-6 py-3 rounded-full font-semibold text-lg hover:bg-white/90 transition'
+              >
+                Learn more
+              </Link>
+            </div>
+            <div className='bg-black w-full h-[40rem] rounded-3xl p-12 flex flex-col items-center justify-center gap-8 text-center'>
+              <h4 className='text-white text-5xl font-semibold font-abhaya-libre max-w-[20rem]'>UNITPUDGY GLOBAL</h4>
+              <p className='text-xl text-white leading-8'>
+                Pudgy is organising over 60 global events to bring together the Pudgy Community, and support one
+                another.
+              </p>
+              <Link
+                href='/global'
+                className='bg-white text-black px-6 py-3 rounded-full font-semibold text-lg hover:bg-white/90 transition'
+              >
+                Learn more
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className='w-full max-w-7xl mx-auto px-16 h-[40rem] flex flex-col items-center justify-center py-8'>
+          <p className='text-center font-abhaya-libre text-4xl font-semibold'>Unit Network</p>
+          <div className='flex items-center justify-center gap-4 mt-4'>
+            <Link
+              href='#'
+              className='rounded-full bg-black p-1 min-h-8 min-w-8 max-h-8 max-w-8 flex items-center justify-center'
+            >
+              <Image src={whatsappLogo} alt='Whatsapp Logo' width={20} height={20} className='invert' />
+            </Link>
+            <Link
+              href='#'
+              className='rounded-full bg-black p-1 min-h-8 min-w-8 max-h-8 max-w-8 flex items-center justify-center'
+            >
+              <Image src={instagramLogo} alt='Instagram Logo' width={24} height={24} className='invert' />
+            </Link>
+            <Link
+              href='#'
+              className='rounded-full bg-black p-1 min-h-8 min-w-8 max-h-8 max-w-8 flex items-center justify-center'
+            >
+              <Image src={telegramLogo} alt='Telegram Logo' width={28} height={28} className='invert' />
+            </Link>
+            <Link
+              href='#'
+              className='rounded-full bg-black p-1 min-h-8 min-w-8 max-h-8 max-w-8 flex items-center justify-center'
+            >
+              <Image src={facebookLogo} alt='Facebook Logo' width={26} height={26} className='invert' />
+            </Link>
+            <Link
+              href='#'
+              className='rounded-full bg-black p-1 min-h-8 min-w-8 max-h-8 max-w-8 flex items-center justify-center'
+            >
+              <Image src={xLogo} alt='X Logo' width={18} height={18} className='invert' />
+            </Link>
+            <Link
+              href='#'
+              className='rounded-full bg-black p-1 min-h-8 min-w-8 max-h-8 max-w-8 flex items-center justify-center'
+            >
+              <Image src={linkedinLogo} alt='Linkedin Logo' width={16} height={16} className='invert' />
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
