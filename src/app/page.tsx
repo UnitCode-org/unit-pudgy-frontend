@@ -11,13 +11,14 @@ import whatsappLogo from '@/public/logo/whatsapp.svg';
 import unitNetworkImg from '@/public/unit-network.png';
 import unitLogo from '@/public/logo/unit.svg';
 import downArrow from '@/public/down-arrow.svg';
+import FadeIn from '@/components/FadeIn';
 
 export default function Home() {
   return (
     <div className='min-h-screen font-poppins'>
       <div className='h-[calc(100vh+2rem)] hero-background-image px-16 fade-to-black'>
         <div className='max-w-7xl h-screen mx-auto w-full flex flex-col items-center justify-between'>
-          <div className='flex items-center justify-between py-8 text-white w-full'>
+          <FadeIn delay={1} direction='down' className='flex items-center justify-between py-8 text-white w-full'>
             <div className='flex items-center gap-20'>
               <Link href='/' className='text-base font-medium border-b-2 px-1'>
                 HOME
@@ -35,12 +36,16 @@ export default function Home() {
                 GLOBAL
               </Link>
             </div>
-          </div>
+          </FadeIn>
           <div className='flex items-center flex-col justify-center text-white max-w-xl text-center'>
-            <h2 className='text-2xl font-medium'>UNIT NETWORK X PUDGY X INSIDER EXPEDITIONS</h2>
-            <h1 className='text-8xl font-abhaya-libre font-semibold mt-2'>EXPLORE ANTARTICA</h1>
+            <FadeIn>
+              <h2 className='text-2xl font-medium'>UNIT NETWORK X PUDGY X INSIDER EXPEDITIONS</h2>
+            </FadeIn>
+            <FadeIn delay={0.5}>
+              <h1 className='text-8xl font-abhaya-libre font-semibold mt-2'>EXPLORE ANTARTICA</h1>
+            </FadeIn>
           </div>
-          <div className='flex items-center justify-between text-white w-full py-10'>
+          <FadeIn delay={1} className='flex items-center justify-between text-white w-full py-10'>
             <div>
               <p className='text-2xl font-semibold font-abhaya-libre'>JANUARY 4-12, 2025</p>
               <p className='text-base text-[#A6A6A6]'>Trip Date</p>
@@ -50,40 +55,48 @@ export default function Home() {
               <p className='text-2xl font-semibold font-abhaya-libre'>USHUAIA, ARGENTINA</p>
               <p className='text-base text-[#A6A6A6]'>Starting Location</p>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </div>
       <div className='w-full bg-white rounded-3xl -mt-[2rem]'>
         <div className='grid grid-cols-2 w-full max-w-7xl mx-auto pt-32 gap-16 px-16'>
           <div className='flex flex-col'>
-            <h1 className='text-6xl text-[64px] font-abhaya-libre font-semibold'>WHAT IS PUDGY PENGUINS?</h1>
-            <p className='text-2xl text-[22px] pt-28'>
-              Pudgy Penguin is a leading community globally, which fosters{' '}
-              <span className='font-semibold'>creativity, freedom, and community</span>. The Pudgy Penguins brand
-              produces content, merchandise, toys, and digital collectables.{' '}
-              <span className='font-semibold'>We believe in the power of play and imagination</span>, and we&apos;re
-              committed to helping you unlock your inner child.
-            </p>
+            <FadeIn enableInView delay={0.3}>
+              <h1 className='text-6xl text-[64px] font-abhaya-libre font-semibold'>WHAT IS PUDGY PENGUINS?</h1>
+            </FadeIn>
+            <FadeIn enableInView delay={0.6}>
+              <p className='text-2xl text-[22px] pt-28'>
+                Pudgy Penguin is a leading community globally, which fosters{' '}
+                <span className='font-semibold'>creativity, freedom, and community</span>. The Pudgy Penguins brand
+                produces content, merchandise, toys, and digital collectables.{' '}
+                <span className='font-semibold'>We believe in the power of play and imagination</span>, and we&apos;re
+                committed to helping you unlock your inner child.
+              </p>
+            </FadeIn>
           </div>
-          <div className='bg-[#F5F5F5] rounded-3xl px-10 pt-24'>
+          <FadeIn enableInView delay={0.9} className='bg-[#F5F5F5] rounded-3xl px-10 pt-24'>
             <div className='w-full h-[24rem] relative rounded-3xl overflow-clip'>
               <Image src={pudgyPenguinImg} alt='Pudgy Penguin Image' fill className='object-cover object-top' />
             </div>
-          </div>
+          </FadeIn>
         </div>
         <div className='grid grid-cols-2 w-full max-w-7xl mx-auto pt-32 gap-16 px-16 pb-32'>
-          <div className='bg-[#F5F5F5] rounded-3xl px-10 pt-24'>
+          <FadeIn enableInView delay={0.9} className='bg-[#F5F5F5] rounded-3xl px-10 pt-24'>
             <div className='w-full h-[24rem] relative rounded-3xl overflow-clip'>
               <Image src={unitNetworkImg} alt='Unit Network Image' fill className='object-cover' />
             </div>
-          </div>
+          </FadeIn>
           <div className='flex flex-col'>
-            <h1 className='text-6xl text-[64px] font-abhaya-libre font-semibold'>WHAT IS UNIT NETWORK?</h1>
-            <p className='text-2xl text-[22px] pt-28'>
-              Unit Network is a <span className='font-semibold'>leading technology for tokenisation</span> with a
-              community with a wide range of interest and backgrounds, with the underlying mission to create{' '}
-              <span className='font-semibold'>a better economic system and world</span>.
-            </p>
+            <FadeIn enableInView delay={0.3}>
+              <h1 className='text-6xl text-[64px] font-abhaya-libre font-semibold'>WHAT IS UNIT NETWORK?</h1>
+            </FadeIn>
+            <FadeIn enableInView delay={0.6}>
+              <p className='text-2xl text-[22px] pt-28'>
+                Unit Network is a <span className='font-semibold'>leading technology for tokenisation</span> with a
+                community with a wide range of interest and backgrounds, with the underlying mission to create{' '}
+                <span className='font-semibold'>a better economic system and world</span>.
+              </p>
+            </FadeIn>
           </div>
         </div>
         <div className='w-full max-w-7xl mx-auto px-16'>
@@ -91,28 +104,36 @@ export default function Home() {
         </div>
         <div className='w-full max-w-7xl mx-auto pt-28 px-16 pb-32'>
           <div className='grid grid-cols-2 gap-16'>
-            <h2 className='text-6xl text-[64px] font-abhaya-libre font-semibold'>WHAT IS UNITPUDGY ANTARTICA?</h2>
+            <FadeIn enableInView delay={0.3}>
+              <h2 className='text-6xl text-[64px] font-abhaya-libre font-semibold'>WHAT IS UNITPUDGY ANTARTICA?</h2>
+            </FadeIn>
             <div>
-              <p className='text-2xl text-[22px]'>
-                Pudgy is Pudgy is going to <span className='font-semibold'>Antartica in January</span>, and plans to go
-                yearly.
-              </p>
-              <Link
-                href='/antartica'
-                className='bg-black text-white px-6 py-3 rounded-full font-semibold text-lg mt-16 hover:bg-gray-800 transition block w-fit'
-              >
-                Learn more
-              </Link>
+              <FadeIn enableInView delay={0.6}>
+                <p className='text-2xl text-[22px]'>
+                  Pudgy is going to <span className='font-semibold'>Antartica in January</span>, and plans to
+                  go yearly.
+                </p>
+              </FadeIn>
+              <FadeIn enableInView delay={0.9}>
+                <Link
+                  href='/antartica'
+                  className='bg-black text-white px-6 py-3 rounded-full font-semibold text-lg mt-16 hover:bg-gray-800 transition block w-fit'
+                >
+                  Learn more
+                </Link>
+              </FadeIn>
             </div>
           </div>
-          <div className='w-full h-[20rem] relative rounded-3xl overflow-clip mt-14'>
+          <FadeIn enableInView delay={0.9} className='w-full h-[20rem] relative rounded-3xl overflow-clip mt-14'>
             <Image src={sailImg} alt='Sail Image' fill className='object-cover' />
-          </div>
+          </FadeIn>
         </div>
         <div className='w-full max-w-7xl mx-auto px-16'>
-          <h3 className='text-6xl text-[56px] font-semibold font-abhaya-libre text-center'>THINGS TO KNOW</h3>
+          <FadeIn enableInView delay={0.3}>
+            <h3 className='text-6xl text-[56px] font-semibold font-abhaya-libre text-center'>THINGS TO KNOW</h3>
+          </FadeIn>
           <div className='grid grid-cols-2 gap-10 mt-20'>
-            <div className='bg-black w-full h-[40rem] rounded-3xl p-12 flex flex-col items-center justify-center gap-8 text-center'>
+            <FadeIn enableInView delay={0.6} className='bg-black w-full h-[40rem] rounded-3xl p-12 flex flex-col items-center justify-center gap-8 text-center'>
               <h4 className='text-white text-5xl font-semibold font-abhaya-libre'>UNITPUDGY TOKENISATION</h4>
               <p className='text-xl text-white leading-8'>
                 Pudgy is being tokenised on the Unit Network, so many people can hold a Pudgy Penguin. We hope this will
@@ -124,8 +145,8 @@ export default function Home() {
               >
                 Learn more
               </Link>
-            </div>
-            <div className='bg-black w-full h-[40rem] rounded-3xl p-12 flex flex-col items-center justify-center gap-8 text-center'>
+            </FadeIn>
+            <FadeIn enableInView delay={0.9} className='bg-black w-full h-[40rem] rounded-3xl p-12 flex flex-col items-center justify-center gap-8 text-center'>
               <h4 className='text-white text-5xl font-semibold font-abhaya-libre max-w-[20rem]'>UNITPUDGY GLOBAL</h4>
               <p className='text-xl text-white leading-8'>
                 Pudgy is organising over 60 global events to bring together the Pudgy Community, and support one
@@ -137,7 +158,7 @@ export default function Home() {
               >
                 Learn more
               </Link>
-            </div>
+            </FadeIn>
           </div>
         </div>
         <div className='w-full max-w-7xl mx-auto px-16 h-[40rem] flex flex-col items-center justify-center py-8'>

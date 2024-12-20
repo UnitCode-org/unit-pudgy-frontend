@@ -15,13 +15,14 @@ import penguinsImg from '@/public/penguins.png';
 import iglooImg from '@/public/igloo.png';
 import boatNoseImg from '@/public/boat-nose.jpg';
 import Countdown from './_components/countdown';
+import FadeIn from '@/components/FadeIn';
 
-export default function Home() {
+export default function Antartica() {
   return (
     <div className='min-h-screen font-poppins'>
       <div className='h-[calc(100vh+2rem)] antartica-background-image px-16 fade-to-black'>
         <div className='max-w-7xl h-screen mx-auto w-full flex flex-col items-center justify-between'>
-          <div className='flex items-center justify-between py-8 text-white w-full'>
+          <FadeIn delay={1} direction='down' className='flex items-center justify-between py-8 text-white w-full'>
             <div className='flex items-center gap-20'>
               <Link href='/' className='text-base font-medium'>
                 HOME
@@ -39,13 +40,19 @@ export default function Home() {
                 GLOBAL
               </Link>
             </div>
-          </div>
+          </FadeIn>
           <div className='flex items-center flex-col justify-center text-white max-w-xl text-center gap-12'>
-            <h2 className='text-2xl font-medium max-w-sm'>PUDGY PENGUINS IS GOING TO ANTARTICA IN EARLY JANUARY</h2>
-            <Countdown />
-            <h2 className='text-2xl font-medium'>JOIN THIS ADVENTURE OF A LIFETIME.</h2>
+            <FadeIn>
+              <h2 className='text-2xl font-medium max-w-sm'>PUDGY PENGUINS IS GOING TO ANTARTICA IN EARLY JANUARY</h2>
+            </FadeIn>
+            <FadeIn delay={0.5}>
+              <Countdown />
+            </FadeIn>
+            <FadeIn delay={0.5}>
+              <h2 className='text-2xl font-medium'>JOIN THIS ADVENTURE OF A LIFETIME.</h2>
+            </FadeIn>
           </div>
-          <div className='flex items-center justify-between text-white w-full py-10'>
+          <FadeIn delay={1} className='flex items-center justify-between text-white w-full py-10'>
             <div>
               <p className='text-2xl font-semibold font-abhaya-libre'>JANUARY 4-12, 2025</p>
               <p className='text-base text-[#A6A6A6]'>Trip Date</p>
@@ -55,17 +62,21 @@ export default function Home() {
               <p className='text-2xl font-semibold font-abhaya-libre'>USHUAIA, ARGENTINA</p>
               <p className='text-base text-[#A6A6A6]'>Starting Location</p>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </div>
       <div className='w-full bg-white rounded-3xl -mt-[2rem]'>
         <div className='w-full max-w-7xl mx-auto pt-32 px-16'>
-          <Image src={iglooImg} alt='Igloo Image' width={160} height={160} className='mx-auto' />
-          <h2 className='text-5xl font-semibold font-abhaya-libre text-center max-w-md mx-auto mt-16'>
-            PUDGY ANTARTICA ACTIVITIES
-          </h2>
+          <FadeIn enableInView delay={0.3}>
+            <Image src={iglooImg} alt='Igloo Image' width={160} height={160} className='mx-auto' />
+          </FadeIn>
+          <FadeIn enableInView delay={0.3}>
+            <h2 className='text-5xl font-semibold font-abhaya-libre text-center max-w-md mx-auto mt-16'>
+              PUDGY ANTARTICA ACTIVITIES
+            </h2>
+          </FadeIn>
           <div className='grid grid-cols-3 gap-10 max-w-5xl mx-auto mt-24'>
-            <div className='relative h-[26rem]'>
+            <FadeIn enableInView delay={0.6} className='relative h-[26rem]'>
               <div className='absolute z-10 w-full h-full rounded-3xl overflow-clip'>
                 <div className='w-full h-full relative blur-[2px] brightness-50'>
                   <Image src={natureImg} alt='Sail Image' fill className='object-cover object-left' />
@@ -77,8 +88,8 @@ export default function Home() {
                   Opportunity to hike daily, with wellness activities alongside.
                 </p>
               </div>
-            </div>
-            <div className='relative h-[26rem]'>
+            </FadeIn>
+            <FadeIn enableInView delay={0.9} className='relative h-[26rem]'>
               <div className='absolute z-10 w-full h-full rounded-3xl overflow-clip'>
                 <div className='w-full h-full relative blur-[2px] brightness-50'>
                   <Image src={talksImg} alt='Sail Image' fill className='object-cover object-left' />
@@ -88,8 +99,8 @@ export default function Home() {
                 <h4 className='text-white text-2xl text-[22px] font-semibold'>TALKS</h4>
                 <p className='text-base leading-8 text-white'>Regular talks from leading experts in the field.</p>
               </div>
-            </div>
-            <div className='relative h-[26rem]'>
+            </FadeIn>
+            <FadeIn enableInView delay={1.2} className='relative h-[26rem]'>
               <div className='absolute z-10 w-full h-full rounded-3xl overflow-clip'>
                 <div className='w-full h-full relative blur-[2px] brightness-50'>
                   <Image src={musicImg} alt='Sail Image' fill className='object-cover object-left' />
@@ -101,40 +112,45 @@ export default function Home() {
                   Live music and performance from well known DJs, musicians and artists.
                 </p>
               </div>
-            </div>
+            </FadeIn>
           </div>
         </div>
         <div className='w=full max-w-7xl mx-auto pt-36 px-16 pb-32'>
           <div className='grid grid-cols-2 gap-16'>
             <div>
-              <h2 className='text-6xl text-[64px] font-abhaya-libre font-semibold'>PUDGY ANTARTICA GIVEAWAY</h2>
-
-              <button className='bg-black text-white px-6 py-3 rounded-full font-semibold text-lg mt-16 hover:bg-black/90 transition'>
-                Share on X
-              </button>
+              <FadeIn enableInView delay={0.3}>
+                <h2 className='text-6xl text-[64px] font-abhaya-libre font-semibold'>PUDGY ANTARTICA GIVEAWAY</h2>
+              </FadeIn>
+              <FadeIn enableInView delay={0.6}>
+                <button className='bg-black text-white px-6 py-3 rounded-full font-semibold text-lg mt-16 hover:bg-black/90 transition'>
+                  Share on X
+                </button>
+              </FadeIn>
             </div>
-            <p className='text-2xl text-[22px]'>
-              Exciting Opportunity!
-              <br />
-              Once all 20 spots are filled,{' '}
-              <span className='font-semibold'>
-                one lucky participant from the group will be selected to attend for free!
-              </span>{' '}
-              In addition, a golden ticket will be awarded to a member of the Pudgy community who helps spread the word
-              by sharing this link.
-              <br />
-              <br />
-              Don’t miss your chance—secure your spot and share the opportunity today!
-            </p>
+            <FadeIn enableInView delay={0.9}>
+              <p className='text-2xl text-[22px]'>
+                Exciting Opportunity!
+                <br />
+                Once all 20 spots are filled,{' '}
+                <span className='font-semibold'>
+                  one lucky participant from the group will be selected to attend for free!
+                </span>{' '}
+                In addition, a golden ticket will be awarded to a member of the Pudgy community who helps spread the
+                word by sharing this link.
+                <br />
+                <br />
+                Don’t miss your chance—secure your spot and share the opportunity today!
+              </p>
+            </FadeIn>
           </div>
-          <div className='w-full h-[20rem] relative rounded-3xl overflow-clip mt-14'>
+          <FadeIn enableInView delay={0.9} className='w-full h-[20rem] relative rounded-3xl overflow-clip mt-14'>
             <Image src={penguinsImg} alt='Pudgy Penguin Image' fill className='object-cover' />
-          </div>
+          </FadeIn>
         </div>
         <div className='footer-background-image'>
           <div className='w-full max-w-7xl mx-auto px-16 h-[60rem] flex flex-col items-center justify-between py-8'>
             <div className='h-[40px]' />
-            <div className='grid grid-cols-2 bg-white rounded-3xl max-w-2xl overflow-clip'>
+            <FadeIn enableInView delay={0.3} className='grid grid-cols-2 bg-white rounded-3xl max-w-2xl overflow-clip'>
               <div className='pr-12'>
                 <div className='relative h-[32rem]'>
                   <Image src={boatNoseImg} alt='Boat Image' fill className='object-cover' />
@@ -156,7 +172,7 @@ export default function Home() {
                   Join Now
                 </Link>
               </div>
-            </div>
+            </FadeIn>
             <div>
               <p className='text-center font-abhaya-libre text-4xl font-semibold text-white'>Unit Network</p>
               <div className='flex items-center justify-center gap-4 mt-4'>
