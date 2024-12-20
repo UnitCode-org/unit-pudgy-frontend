@@ -17,18 +17,18 @@ import boatNoseImg from '@/public/boat-nose.jpg';
 import Countdown from './_components/countdown';
 import FadeIn from '@/components/FadeIn';
 
-export default function Antartica() {
+export default function Antarctica() {
   return (
     <div className='min-h-screen font-poppins'>
-      <div className='h-[calc(100vh+2rem)] antartica-background-image px-16 fade-to-black'>
+      <div className='h-[calc(100vh+2rem)] antarctica-background-image px-16 fade-to-black'>
         <div className='max-w-7xl h-screen mx-auto w-full flex flex-col items-center justify-between'>
           <FadeIn delay={1} direction='down' className='flex items-center justify-between py-8 text-white w-full'>
             <div className='flex items-center gap-20'>
               <Link href='/' className='text-base font-medium'>
                 HOME
               </Link>
-              <Link href='/antartica' className='text-base font-medium border-b-2 px-1'>
-                ANTARTICA
+              <Link href='/antarctica' className='text-base font-medium border-b-2 px-1'>
+                ANTARCTICA
               </Link>
             </div>
             <Image src={unitLogo} alt='Unit Logo' width={32} height={32} />
@@ -43,7 +43,7 @@ export default function Antartica() {
           </FadeIn>
           <div className='flex items-center flex-col justify-center text-white max-w-xl text-center gap-12'>
             <FadeIn>
-              <h2 className='text-2xl font-medium max-w-sm'>PUDGY PENGUINS IS GOING TO ANTARTICA IN EARLY JANUARY</h2>
+              <h2 className='text-2xl font-medium max-w-sm'>PUDGY PENGUINS IS GOING TO ANTARCTICA IN EARLY JANUARY</h2>
             </FadeIn>
             <FadeIn delay={0.5}>
               <Countdown />
@@ -72,7 +72,7 @@ export default function Antartica() {
           </FadeIn>
           <FadeIn enableInView delay={0.3}>
             <h2 className='text-5xl font-semibold font-abhaya-libre text-center max-w-md mx-auto mt-16'>
-              PUDGY ANTARTICA ACTIVITIES
+              PUDGY ANTARCTICA ACTIVITIES
             </h2>
           </FadeIn>
           <div className='grid grid-cols-3 gap-10 max-w-5xl mx-auto mt-24'>
@@ -119,7 +119,7 @@ export default function Antartica() {
           <div className='grid grid-cols-2 gap-16'>
             <div>
               <FadeIn enableInView delay={0.3}>
-                <h2 className='text-6xl text-[64px] font-abhaya-libre font-semibold'>PUDGY ANTARTICA GIVEAWAY</h2>
+                <h2 className='text-6xl text-[64px] font-abhaya-libre font-semibold'>PUDGY ANTARCTICA GIVEAWAY</h2>
               </FadeIn>
               <FadeIn enableInView delay={0.6}>
                 <button className='bg-black text-white px-6 py-3 rounded-full font-semibold text-lg mt-16 hover:bg-black/90 transition'>
@@ -158,7 +158,7 @@ export default function Antartica() {
               </div>
               <div className='flex flex-col items-center justify-center gap-8 py-12 pr-12'>
                 <h3 className='text-4xl font-abhaya-libre font-semibold text-center'>
-                  WANT TO JOIN UNIT PUDGY ANTARTICA?
+                  WANT TO JOIN UNIT PUDGY ANTARCTICA?
                 </h3>
                 <p className='text-base text-center'>
                   Sign up using this link and use the code{' '}

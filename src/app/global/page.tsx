@@ -23,8 +23,8 @@ export default function Global() {
               <Link href='/' className='text-base font-medium'>
                 HOME
               </Link>
-              <Link href='/antartica' className='text-base font-medium'>
-                ANTARTICA
+              <Link href='/antarctica' className='text-base font-medium'>
+                ANTARCTICA
               </Link>
             </div>
             <Image src={unitLogo} alt='Unit Logo' width={32} height={32} />
