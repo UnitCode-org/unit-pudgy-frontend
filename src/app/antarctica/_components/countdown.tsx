@@ -30,21 +30,25 @@ function Countdown() {
   }, []);
 
   return (
-    <div>
-      <div className='flex items-center gap-24 justify-center'>
-        <h1 className='text-8xl font-abhaya-libre font-semibold'>
-          {loading ? '--' : timeLeft.days.toString().padStart(2, '0')}<span className='text-3xl'>DAYS</span>
+    <div className='flex flex-col items-center gap-6 md:gap-0'>
+      <div className='flex items-center gap-12 md:gap-24 justify-center'>
+        <h1 className='text-7xl md:text-8xl font-abhaya-libre font-semibold flex flex-col items-center md:items-baseline md:flex-row'>
+          {loading ? '--' : timeLeft.days.toString().padStart(2, '0')}
+          <span className='text-2xl md:text-3xl'>DAYS</span>
         </h1>
-        <h1 className='text-8xl font-abhaya-libre font-semibold'>
-          {loading ? '--' : timeLeft.hours.toString().padStart(2, '0')}<span className='text-3xl'>HOURS</span>
+        <h1 className='text-7xl md:text-8xl font-abhaya-libre font-semibold flex flex-col items-center md:items-baseline md:flex-row'>
+          {loading ? '--' : timeLeft.hours.toString().padStart(2, '0')}
+          <span className='text-2xl md:text-3xl'>HOURS</span>
         </h1>
       </div>
       <div className='flex items-center gap-12'>
-        <h1 className='text-8xl font-abhaya-libre font-semibold'>
-          {loading ? '--' : timeLeft.minutes.toString().padStart(2, '0')}<span className='text-3xl'>MINUTES</span>
+        <h1 className='text-7xl md:text-8xl font-abhaya-libre font-semibold flex flex-col items-center md:items-baseline md:flex-row'>
+          {loading ? '--' : timeLeft.minutes.toString().padStart(2, '0')}
+          <span className='text-2xl md:text-3xl'>MINUTES</span>
         </h1>
-        <h1 className='text-8xl font-abhaya-libre font-semibold'>
-          {loading ? '--' : timeLeft.seconds.toString().padStart(2, '0')}<span className='text-3xl'>SECONDS</span>
+        <h1 className='text-7xl md:text-8xl font-abhaya-libre font-semibold flex flex-col items-center md:items-baseline md:flex-row'>
+          {loading ? '--' : timeLeft.seconds.toString().padStart(2, '0')}
+          <span className='text-2xl md:text-3xl'>SECONDS</span>
         </h1>
       </div>
     </div>

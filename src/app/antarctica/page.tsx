@@ -16,13 +16,50 @@ import iglooImg from '@/public/igloo.png';
 import boatNoseImg from '@/public/boat-nose.jpg';
 import Countdown from './_components/countdown';
 import FadeIn from '@/components/FadeIn';
+import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet';
+import { MenuIcon } from 'lucide-react';
 
 export default function Antarctica() {
   return (
     <div className='min-h-screen font-poppins'>
-      <div className='h-[calc(100vh+2rem)] antarctica-background-image px-16 fade-to-black'>
+      <div className='h-[calc(100vh+2rem)] antarctica-background-image px-6 md:px-16 fade-to-black'>
         <div className='max-w-7xl h-screen mx-auto w-full flex flex-col items-center justify-between'>
-          <FadeIn delay={1} direction='down' className='flex items-center justify-between py-8 text-white w-full'>
+          <FadeIn
+            delay={1}
+            direction='down'
+            className='flex md:hidden items-center justify-between py-8 text-white w-full'
+          >
+            <Sheet>
+              <SheetTrigger>
+                <MenuIcon className='w-6 h-6' />
+              </SheetTrigger>
+              <SheetContent side='left'>
+                <SheetHeader>
+                  <SheetTitle>UNITPUDGY ANTARCTICA</SheetTitle>
+                </SheetHeader>
+                <div className='flex flex-col items-center justify-center gap-4 mt-4'>
+                  <Link href='/' className='text-base font-medium'>
+                    HOME
+                  </Link>
+                  <Link href='/antarctica' className='text-base font-medium'>
+                    ANTARCTICA
+                  </Link>
+                  <Link href='/tokenisation' className='text-base font-medium'>
+                    TOKENISATION
+                  </Link>
+                  <Link href='/global' className='text-base font-medium'>
+                    GLOBAL
+                  </Link>
+                </div>
+              </SheetContent>
+            </Sheet>
+            <Image src={unitLogo} alt='Unit Logo' width={32} height={32} />
+          </FadeIn>
+          <FadeIn
+            delay={1}
+            direction='down'
+            className='hidden md:flex items-center justify-between py-8 text-white w-full'
+          >
             <div className='flex items-center gap-20'>
               <Link href='/' className='text-base font-medium'>
                 HOME
@@ -43,39 +80,41 @@ export default function Antarctica() {
           </FadeIn>
           <div className='flex items-center flex-col justify-center text-white max-w-xl text-center gap-12'>
             <FadeIn>
-              <h2 className='text-2xl font-medium max-w-sm'>PUDGY PENGUINS IS GOING TO ANTARCTICA IN EARLY JANUARY</h2>
+              <h2 className='md:text-2xl font-medium max-w-sm'>
+                PUDGY PENGUINS IS GOING TO ANTARCTICA IN EARLY JANUARY
+              </h2>
             </FadeIn>
             <FadeIn delay={0.5}>
               <Countdown />
             </FadeIn>
             <FadeIn delay={0.5}>
-              <h2 className='text-2xl font-medium'>JOIN THIS ADVENTURE OF A LIFETIME.</h2>
+              <h2 className='md:text-2xl font-medium'>JOIN THIS ADVENTURE OF A LIFETIME.</h2>
             </FadeIn>
           </div>
-          <FadeIn delay={1} className='flex items-center justify-between text-white w-full py-10'>
+          <FadeIn delay={1} className='flex items-center justify-between text-white w-full py-10 gap-8'>
             <div>
-              <p className='text-2xl font-semibold font-abhaya-libre'>JANUARY 4-12, 2025</p>
+              <p className='md:text-2xl font-semibold font-abhaya-libre'>JANUARY 4-12, 2025</p>
               <p className='text-base text-[#A6A6A6]'>Trip Date</p>
             </div>
-            <Image src={downArrow} alt='Down Arrow' width={24} height={24} />
-            <div>
-              <p className='text-2xl font-semibold font-abhaya-libre'>USHUAIA, ARGENTINA</p>
+            <Image src={downArrow} alt='Down Arrow' width={24} height={24} className='hidden md:block' />
+            <div className='text-end md:text-left'>
+              <p className='md:text-2xl font-semibold font-abhaya-libre'>USHUAIA, ARGENTINA</p>
               <p className='text-base text-[#A6A6A6]'>Starting Location</p>
             </div>
           </FadeIn>
         </div>
       </div>
       <div className='w-full bg-white rounded-3xl -mt-[2rem]'>
-        <div className='w-full max-w-7xl mx-auto pt-32 px-16'>
+        <div className='w-full max-w-7xl mx-auto pt-20 md:pt-32 px-6 md:px-16'>
           <FadeIn enableInView delay={0.3}>
             <Image src={iglooImg} alt='Igloo Image' width={160} height={160} className='mx-auto' />
           </FadeIn>
           <FadeIn enableInView delay={0.3}>
-            <h2 className='text-5xl font-semibold font-abhaya-libre text-center max-w-md mx-auto mt-16'>
+            <h2 className='text-5xl font-semibold font-abhaya-libre text-center max-w-md mx-auto mt-10 md:mt-16'>
               PUDGY ANTARCTICA ACTIVITIES
             </h2>
           </FadeIn>
-          <div className='grid grid-cols-3 gap-10 max-w-5xl mx-auto mt-24'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 max-w-5xl mx-auto mt-12 md:mt-24'>
             <FadeIn enableInView delay={0.6} className='relative h-[26rem]'>
               <div className='absolute z-10 w-full h-full rounded-3xl overflow-clip'>
                 <div className='w-full h-full relative blur-[2px] brightness-50'>
@@ -115,20 +154,22 @@ export default function Antarctica() {
             </FadeIn>
           </div>
         </div>
-        <div className='w=full max-w-7xl mx-auto pt-36 px-16 pb-32'>
-          <div className='grid grid-cols-2 gap-16'>
+        <div className='w=full max-w-7xl mx-auto pt-20 md:pt-36 px-6 md:px-16 pb-20 md:pb-32'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16'>
             <div>
               <FadeIn enableInView delay={0.3}>
-                <h2 className='text-6xl text-[64px] font-abhaya-libre font-semibold'>PUDGY ANTARCTICA GIVEAWAY</h2>
+                <h2 className='text-4xl md:text-6xl md:text-[64px] font-abhaya-libre font-semibold'>
+                  PUDGY ANTARCTICA GIVEAWAY
+                </h2>
               </FadeIn>
               <FadeIn enableInView delay={0.6}>
-                <button className='bg-black text-white px-6 py-3 rounded-full font-semibold text-lg mt-16 hover:bg-black/90 transition'>
+                <button className='bg-black text-white px-6 py-3 rounded-full font-semibold text-lg mt-8 md:mt-16 hover:bg-black/90 transition'>
                   Share on X
                 </button>
               </FadeIn>
             </div>
             <FadeIn enableInView delay={0.9}>
-              <p className='text-2xl text-[22px]'>
+              <p className='md:text-2xl md:text-[22px]'>
                 Exciting Opportunity!
                 <br />
                 Once all 20 spots are filled,{' '}
@@ -143,20 +184,24 @@ export default function Antarctica() {
               </p>
             </FadeIn>
           </div>
-          <FadeIn enableInView delay={0.9} className='w-full h-[20rem] relative rounded-3xl overflow-clip mt-14'>
+          <FadeIn enableInView delay={0.9} className='w-full h-[20rem] relative rounded-3xl overflow-clip mt-8 md:mt-14'>
             <Image src={penguinsImg} alt='Pudgy Penguin Image' fill className='object-cover' />
           </FadeIn>
         </div>
         <div className='footer-background-image'>
-          <div className='w-full max-w-7xl mx-auto px-16 h-[60rem] flex flex-col items-center justify-between py-8'>
-            <div className='h-[40px]' />
-            <FadeIn enableInView delay={0.3} className='grid grid-cols-2 bg-white rounded-3xl max-w-2xl overflow-clip'>
-              <div className='pr-12'>
-                <div className='relative h-[32rem]'>
+          <div className='w-full max-w-7xl mx-auto px-6 md:px-16 h-[60rem] flex flex-col items-center justify-end md:justify-between gap-16 md:gap-0 py-8'>
+            <div className='md:h-[40px]' />
+            <FadeIn
+              enableInView
+              delay={0.3}
+              className='grid grid-cols-1 md:grid-cols-2 bg-white rounded-3xl max-w-2xl overflow-clip'
+            >
+              <div className='md:pr-12'>
+                <div className='relative h-[20rem] md:h-[32rem]'>
                   <Image src={boatNoseImg} alt='Boat Image' fill className='object-cover' />
                 </div>
               </div>
-              <div className='flex flex-col items-center justify-center gap-8 py-12 pr-12'>
+              <div className='flex flex-col items-center justify-center gap-8 py-8 px-8 md:py-12 md:pr-12'>
                 <h3 className='text-4xl font-abhaya-libre font-semibold text-center'>
                   WANT TO JOIN UNIT PUDGY ANTARCTICA?
                 </h3>
@@ -167,7 +212,7 @@ export default function Antarctica() {
                 <Link
                   href='https://insiderexpeditions.com/artists-in-antarctica-2025'
                   target='_blank'
-                  className='bg-black text-white px-6 py-3 rounded-full font-semibold text-lg mt-16 hover:bg-gray-800 transition block w-full text-center'
+                  className='bg-black text-white px-6 py-3 rounded-full font-semibold text-lg mt-4 md:mt-16 hover:bg-gray-800 transition block w-full text-center'
                 >
                   Join Now
                 </Link>

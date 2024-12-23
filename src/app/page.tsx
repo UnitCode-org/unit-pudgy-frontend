@@ -84,12 +84,12 @@ export default function Home() {
           </div>
           <FadeIn delay={1} className='flex items-center justify-between text-white w-full py-10 gap-8'>
             <div>
-              <p className='text-2xl font-semibold font-abhaya-libre'>JANUARY 4-12, 2025</p>
+              <p className='md:text-2xl font-semibold font-abhaya-libre'>JANUARY 4-12, 2025</p>
               <p className='text-base text-[#A6A6A6]'>Trip Date</p>
             </div>
             <Image src={downArrow} alt='Down Arrow' width={24} height={24} className='hidden md:block' />
             <div className='text-end md:text-left'>
-              <p className='text-2xl font-semibold font-abhaya-libre'>USHUAIA, ARGENTINA</p>
+              <p className='md:text-2xl font-semibold font-abhaya-libre'>USHUAIA, ARGENTINA</p>
               <p className='text-base text-[#A6A6A6]'>Starting Location</p>
             </div>
           </FadeIn>

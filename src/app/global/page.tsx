@@ -1,4 +1,6 @@
 import FadeIn from '@/components/FadeIn';
+import { Sheet } from '@/components/ui/sheet';
+import { SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import downArrow from '@/public/down-arrow.svg';
 import facebookLogo from '@/public/logo/facebook.svg';
 import instagramLogo from '@/public/logo/instagram.svg';
@@ -10,15 +12,51 @@ import xLogo from '@/public/logo/x.svg';
 import penguin3Img from '@/public/penguins-3.png';
 import penguin4Img from '@/public/penguins-4.png';
 import penguin5Img from '@/public/penguins-5.png';
+import { MenuIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Global() {
   return (
     <div className='min-h-screen font-poppins'>
-      <div className='h-[calc(100vh+2rem)] global-background-image px-16 fade-to-black'>
+      <div className='h-[calc(100vh+2rem)] global-background-image px-6 md:px-16 fade-to-black'>
         <div className='max-w-7xl h-screen mx-auto w-full flex flex-col items-center justify-between'>
-          <FadeIn delay={1} direction='down' className='flex items-center justify-between py-8 text-white w-full'>
+          <FadeIn
+            delay={1}
+            direction='down'
+            className='flex md:hidden items-center justify-between py-8 text-white w-full'
+          >
+            <Sheet>
+              <SheetTrigger>
+                <MenuIcon className='w-6 h-6' />
+              </SheetTrigger>
+              <SheetContent side='left'>
+                <SheetHeader>
+                  <SheetTitle>UNITPUDGY ANTARCTICA</SheetTitle>
+                </SheetHeader>
+                <div className='flex flex-col items-center justify-center gap-4 mt-4'>
+                  <Link href='/' className='text-base font-medium'>
+                    HOME
+                  </Link>
+                  <Link href='/antarctica' className='text-base font-medium'>
+                    ANTARCTICA
+                  </Link>
+                  <Link href='/tokenisation' className='text-base font-medium'>
+                    TOKENISATION
+                  </Link>
+                  <Link href='/global' className='text-base font-medium'>
+                    GLOBAL
+                  </Link>
+                </div>
+              </SheetContent>
+            </Sheet>
+            <Image src={unitLogo} alt='Unit Logo' width={32} height={32} />
+          </FadeIn>
+          <FadeIn
+            delay={1}
+            direction='down'
+            className='hidden md:flex items-center justify-between py-8 text-white w-full'
+          >
             <div className='flex items-center gap-20'>
               <Link href='/' className='text-base font-medium'>
                 HOME
@@ -39,10 +77,10 @@ export default function Global() {
           </FadeIn>
           <div className='flex items-center flex-col justify-center text-white max-w-xl text-center'>
             <FadeIn>
-              <h2 className='text-2xl font-medium'>PUDGY</h2>
+              <h2 className='md:text-2xl font-medium'>PUDGY</h2>
             </FadeIn>
             <FadeIn delay={0.5}>
-              <h1 className='text-8xl font-abhaya-libre font-semibold mt-2'>GLOBAL</h1>
+              <h1 className='text-6xl md:text-8xl font-abhaya-libre font-semibold mt-2'>GLOBAL</h1>
             </FadeIn>
           </div>
           <FadeIn delay={1} className='flex items-center justify-center text-white w-full py-10'>
@@ -52,12 +90,16 @@ export default function Global() {
       </div>
       <div className='w-full bg-white rounded-3xl -mt-[2rem]'>
         <FadeIn enableInView delay={0.3}>
-          <h2 className='text-6xl text-[56px] font-abhaya-libre font-semibold text-center pt-32'>
+          <h2 className='text-4xl md:text-6xl md:text-[56px] font-abhaya-libre font-semibold text-center pt-20 md:pt-32'>
             PUDGY&apos;S NEW CHAPTER
           </h2>
         </FadeIn>
-        <div className='grid grid-cols-3 w-full max-w-7xl mx-auto pt-20 gap-x-10 gap-y-20 px-16'>
-          <FadeIn enableInView delay={0.6} className='bg-[#F5F5F5] h-[23rem] rounded-3xl px-6 py-8 flex flex-col items-start justify-between gap-8 text-start'>
+        <div className='grid grid-cols-1 md:grid-cols-3 w-full max-w-7xl mx-auto pt-12 md:pt-20 md:gap-x-10 gap-y-8 md:gap-y-20 px-6 md:px-16'>
+          <FadeIn
+            enableInView
+            delay={0.6}
+            className='bg-[#F5F5F5] h-[23rem] rounded-3xl px-6 py-8 flex flex-col items-start justify-between gap-8 text-start'
+          >
             <p className='text-black text-3xl font-medium'>PUDGY IS GOING GLOBAL</p>
             <p className='text-xl text-black leading-8'>
               We&apos;re planning a number of global events, meet-ups and gatherings.
@@ -66,7 +108,11 @@ export default function Global() {
           <FadeIn enableInView delay={0.9} className='relative h-[23rem] rounded-3xl overflow-clip'>
             <Image src={penguin3Img} alt='Pudgy Penguin Image' fill className='object-cover' />
           </FadeIn>
-          <FadeIn enableInView delay={1.2} className='bg-black h-[23rem] rounded-3xl px-6 py-8 flex flex-col items-start justify-between gap-8 text-start'>
+          <FadeIn
+            enableInView
+            delay={1.2}
+            className='bg-black h-[23rem] rounded-3xl px-6 py-8 flex flex-col items-start justify-between gap-8 text-start'
+          >
             <p className='text-white text-3xl font-medium'>HOW CAN I BE A PART?</p>
             <p className='text-xl text-white leading-8'>
               Reach out to our team if you&apos;re keen to be a Unit Pudgy ambassador.
@@ -75,7 +121,11 @@ export default function Global() {
           <FadeIn enableInView delay={0.6} className='relative h-[23rem] rounded-3xl overflow-clip'>
             <Image src={penguin4Img} alt='Pudgy Penguin Image' fill className='object-cover' />
           </FadeIn>
-          <FadeIn enableInView delay={0.9} className='bg-[#F5F5F5] h-[23rem] rounded-3xl px-6 py-8 flex flex-col items-start justify-between gap-8 text-start'>
+          <FadeIn
+            enableInView
+            delay={0.9}
+            className='bg-[#F5F5F5] h-[23rem] rounded-3xl px-6 py-8 flex flex-col items-start justify-between gap-8 text-start'
+          >
             <p className='text-black text-3xl font-medium'>ANY MORE INFO?</p>
             <p className='text-xl text-black leading-8'>
               We&apos;ll be sharing lots more soon!

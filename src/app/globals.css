@@ -50,7 +50,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('../../public/water-footer.jpg');
-  background-position: right bottom -300px;
+  background-position: right bottom 0px;
+}
+
+@media (min-width: 768px) {
+  .footer-background-image {
+    background-position: right bottom -300px;
+  }
 }
 
 @layer base {
